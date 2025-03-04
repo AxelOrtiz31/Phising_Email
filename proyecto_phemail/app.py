@@ -14,7 +14,6 @@ urls = (
 )
 
 app = web.application(urls, globals())
-session = web.session.Session(app, web.session.DiskStore('sessions'), initializer={'logged_user': None})
 
 if __name__ == "__main__":
     app.run()
