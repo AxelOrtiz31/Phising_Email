@@ -2,9 +2,9 @@ import pyrebase
 
 # Configuración de Firebase
 config = {
-    "apiKey": "AIzaSyCq6Okil_OTGuhmSmzRfrbqyDjcxh5Ndds",
-    "authDomain": "prueba-bdnube.firebaseapp.com",
-    "databaseURL": "https://prueba-bdnube-default-rtdb.firebaseio.com",    # No me hackeen :(
+    "apiKey": "AIzaSyDgJ0sJGtaE8xsohI_QQoSTpsls3EEfgkw",
+    "authDomain": "phishing-bd.firebaseapp.com",
+    "databaseURL": "https://phishing-bd-default-rtdb.firebaseio.com",
     "projectId": "phishing-bd",
     "storageBucket": "phishing-bd.firebasestorage.app",
     "messagingSenderId": "1069261453435",
@@ -48,10 +48,3 @@ class Usuarios:
                 "message": "Error del servidor -> Firebase",
                 "error": str(e)
             }
-
-''' Ejemplo de prueba (opcional)
-if __name__ == '__main__':
-    clientes_inst = Clientes()
-    resultado = clientes_inst.consultaClientes()
-    print(resultado)
-'''

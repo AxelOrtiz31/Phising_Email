@@ -2,7 +2,7 @@ import web
 
 render = web.template.render("views", base="master")
 
-# Página de inicio
+# Index
 class Index:
     def GET(self):
         message = "Im looking forward to the journey ahead."
