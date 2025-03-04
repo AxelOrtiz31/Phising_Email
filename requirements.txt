@@ -1,0 +1,3 @@
+pyrebase4
+setuptools
+web.py==0.61
