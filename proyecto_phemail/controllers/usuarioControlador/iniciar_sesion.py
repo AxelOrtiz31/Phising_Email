@@ -1,5 +1,8 @@
 import web
+import os
 from models.usuarios import Usuarios
+
+BASE_URL = os.environ.get("BASE_URL", "https://solid-system-jjrj6wgpx9xj35549-8080.app.github.dev")
 
 render = web.template.render("views", base="master")
 
@@ -38,5 +41,5 @@ class IniciarSesion:
 
         if inicio_usuario:
             # Construir la URL con los datos
-            url = "https://solid-system-jjrj6wgpx9xj35549-8080.app.github.dev/usuarioContenido/phishing?nombre=" + inicio_usuario["nombre"] + "&correo=" + inicio_usuario["correo"]
+            url = f"{BASE_URL}/usuarioContenido/phishing?nombre={inicio_usuario['nombre']}&correo={inicio_usuario['correo']}"
             raise web.seeother(url)
