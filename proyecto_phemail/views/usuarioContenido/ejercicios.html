@@ -1,5 +1,386 @@
+<style>
+    .card:hover {
+        transform: scale(1.05);
+        /* Aumenta el tamaño un 10% */
+        transition: transform 0.5s ease-in-out;
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+        /* Sombra para resaltar */
+    }
+
+    /* Clase personalizada para efectos hover */
+    .btn-custom {
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .btn-custom:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+</style>
 
 
 
-<h1>Hora de practicar</h1>
+<div class="container mt-3">
+    <a href="javascript:history.back()" class="btn btn-primary">
+        <i class="bi bi-arrow-left"></i> Regresar
+    </a>
+</div>
 
+<div class="text-center pb-4">
+    <h1 class="mb-3">¡Hora de practicar!</h1>
+    <p class="fs-5 fw-bold">Reglas del juego:</p>
+
+    <div class="text-start mx-auto w-75 p-4 rounded shadow-lg">
+        <p><strong>1.</strong> Haz clic en el botón debajo de la imagen que creas verídica y que no sea un intento de
+            Phishing.</p>
+        <p><strong>2.</strong> Cada imagen correctamente seleccionada te otorgará un punto.</p>
+        <p><strong>3.</strong> Cada imagen incorrectamente seleccionada te restará un punto.</p>
+        <p><strong>4.</strong> En total hay <span class="fw-bold text-primary">4 imágenes correctas</span> y <span
+                class="fw-bold text-danger">8 incorrectas</span>.</p>
+        <p><strong>5.</strong> Cuando estés seguro de haber encontrado las 4 imágenes correctas, haz clic en el botón
+            <span class="fw-bold">"Finalizar"</span> para obtener tu puntaje.
+        </p>
+        <p><strong>6.</strong> El puntaje comienza con un valor de 0, y debes subirlo a 4 para aprobar.</p>
+        <p><strong>7.</strong> ¡Buena suerte! Veamos si estás preparado para enfrentarte al Phishing.</p>
+    </div>
+</div>
+
+<!-- Carousel wrapper -->
+<div id="carouselMultiItemExample" data-mdb-carousel-init class="carousel slide carousel-dark text-center mt-4"
+    data-mdb-ride="carousel">
+    <!-- Controls -->
+    <div class="d-flex justify-content-center mb-4">
+        <button class="carousel-control-prev position-relative" type="button" data-bs-target="#carouselMultiItemExample"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next position-relative" type="button" data-bs-target="#carouselMultiItemExample"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+        </button>
+    </div>
+
+    <!-- Inner -->
+    <div class="carousel-inner py-4">
+
+        <!-- Primer Foto -->
+        <div class="carousel-item active">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="card">
+                            <img src="/static/imagenes/ejemplo05.jpg" class="card-img-top" alt="ejemplo05.jpg" />
+                            <div class="card-body">
+                                <h5 class="card-title">Outlook</h5>
+                                <p class="card-text">
+                                    Para ser un correo de Outlook se ve muy colorido, aunque bien estructurado...
+                                </p>
+                                <button data-mdb-ripple-init class="btn btn-secondary"
+                                    onmouseover="alert('PERO EL REMITENTE PODRIA NO SER MICROSOFT...')">Pista</button>
+
+                                <button data-mdb-ripple-init class="btn btn-primary" id="error01" onclick="Decremento()"
+                                    type="button">Escoger</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 d-none d-lg-block">
+                        <div class="card">
+                            <img src="/static/imagenes/ejemplo01.jpg" class="card-img-top" alt="ejemplo01.jpg" />
+                            <div class="card-body">
+                                <h5 class="card-title">Impuesto</h5>
+                                <p class="card-text">
+                                    Vaya, asi que un tengo un reembolso, quizas deberia recogerlo...
+                                </p>
+                                <button data-mdb-ripple-init class="btn btn-secondary"
+                                    onmouseover="alert('PERO LA DIRECCION PODRIA TENER ERRORES ORTOGRAFICOS...')">Pista</button>
+
+                                <button data-mdb-ripple-init class="btn btn-primary" id="error02" onclick="Decremento()"
+                                    type="button">Escoger</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 d-none d-lg-block">
+                        <div class="card">
+                            <img src="/static/imagenes/ejemplo02.jpg" class="card-img-top" alt="ejemplo02.jpg" />
+                            <div class="card-body">
+                                <h5 class="card-title">Microsoft</h5>
+                                <p class="card-text">
+                                    ¡Oh no! Mi cuenta esta en riesgo, deberia verificarla para evitar perderla...
+                                </p>
+                                <button data-mdb-ripple-init class="btn btn-secondary"
+                                    onmouseover="alert('¿REALMENTE UN CORREO DE VERIFICACIÓN SERIA TAN SIMPLE?')">Pista</button>
+
+                                <button data-mdb-ripple-init class="btn btn-primary" id="error03" onclick="Decremento()"
+                                    type="button">Escoger</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Segunda foto -->
+        <div class="carousel-item">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-12">
+                        <div class="card">
+                            <img src="/static/imagenes/correcto01.png" class="card-img-top" alt="correcto01.png" />
+                            <div class="card-body">
+                                <h5 class="card-title">Replit</h5>
+                                <p class="card-text">
+                                    ¡He recibido una oferta para ganarme dinero! Entrare a recoger mi premio...
+                                </p>
+                                <button data-mdb-ripple-init class="btn btn-secondary"
+                                    onmouseover="alert('¿REALMENTE GANARIA DINERO ASI DE FACIL?')">Pista</button>
+
+                                <button data-mdb-ripple-init class="btn btn-primary" id="acierto01"
+                                    onclick="Incremento()" type="button">Escoger</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 d-none d-lg-block">
+                        <div class="card">
+                            <img src="/static/imagenes/ejemplo06.jpg" class="card-img-top" alt="ejemplo06.jpg" />
+                            <div class="card-body">
+                                <h5 class="card-title">Banco</h5>
+                                <p class="card-text">
+                                    Al parecer hay una actualización y debo descargar un archivo para efectuarla...
+                                </p>
+                                <button data-mdb-ripple-init class="btn btn-secondary"
+                                    onmouseover="alert('PERO EL ARCHIVO PODRIA CONTENER VIRUS...')">Pista</button>
+
+                                <button data-mdb-ripple-init class="btn btn-primary" id="error04" onclick="Decremento()"
+                                    type="button">Escoger</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 d-none d-lg-block">
+                        <div class="card">
+                            <img src="/static/imagenes/ejemplo04.jpg" class="card-img-top" alt="ejemplo04.jpg" />
+                            <div class="card-body">
+                                <h5 class="card-title">Premio</h5>
+                                <p class="card-text">
+                                    ¡Oh, he ganado un celular! Deberia ingresar mis datos bancarios para pagar la
+                                    entrega del producto...
+                                </p>
+                                <button data-mdb-ripple-init class="btn btn-secondary"
+                                    onmouseover="alert('¿REALMENTE AMAZON ME REGALARIA UN CELULAR?')">Pista</button>
+
+                                <button data-mdb-ripple-init class="btn btn-primary" id="error05" onclick="Decremento()"
+                                    type="button">Escoger</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tercer foto -->
+        <div class="carousel-item">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-12">
+                        <div class="card">
+                            <img src="/static/imagenes/ejemplo03.jpg" class="card-img-top" alt="ejemplo03.jpg" />
+                            <div class="card-body">
+                                <h5 class="card-title">Caducidad</h5>
+                                <p class="card-text">
+                                    Al parecer mi contraseña caduco, deberia ingresar una nueva...
+                                </p>
+                                <button data-mdb-ripple-init class="btn btn-secondary"
+                                    onmouseover="alert('PERO LAS CONTRASEÑAS NO CADUCAN...')">Pista</button>
+
+                                <button data-mdb-ripple-init class="btn btn-primary" id="error06" onclick="Decremento()"
+                                    type="button">Escoger</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 d-none d-lg-block">
+                        <div class="card">
+                            <img src="/static/imagenes/correcto02.png" class="card-img-top" alt="correcto02.png" />
+                            <div class="card-body">
+                                <h5 class="card-title">Ebay</h5>
+                                <p class="card-text">
+                                    Tiene tiempo que no he ingresado a comprar productos...
+                                </p>
+                                <button data-mdb-ripple-init class="btn btn-secondary"
+                                    onmouseover="alert('PERO PORQUE ME NOTIFICARIAN AL RESPECTO...')">Pista</button>
+
+                                <button data-mdb-ripple-init class="btn btn-primary" id="acierto02"
+                                    onclick="Incremento()" type="button">Escoger</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 d-none d-lg-block">
+                        <div class="card">
+                            <img src="/static/imagenes/correcto04.png" class="card-img-top" alt="correcto04.png" />
+                            <div class="card-body">
+                                <h5 class="card-title">Github</h5>
+                                <p class="card-text">
+                                    Se ha creado una DB en Supabase para un proyecto escolar...
+                                </p>
+                                <button data-mdb-ripple-init class="btn btn-secondary"
+                                    onmouseover="alert('¿REALMENTE UN CORREO DE VERIFICACIÓN SERIA TAN SIMPLE?')">Pista</button>
+                                <button data-mdb-ripple-init class="btn btn-primary" id="acierto03"
+                                    onclick="Incremento()" type="button">Escoger</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cuarta foto -->
+        <div class="carousel-item">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                        <div class="card">
+                            <img src="/static/imagenes/ejemplo07.jpg" class="card-img-top" alt="ejemplo07.jpg" />
+                            <div class="card-body">
+                                <h5 class="card-title">Reenvio</h5>
+                                <p class="card-text">
+                                    Los de paqueteria me dicen que la entrega fallo y debo pagar un nuevo envio...
+                                </p>
+                                <button data-mdb-ripple-init class="btn btn-secondary"
+                                    onmouseover="alert('¿REALMENTE DEBO PAGAR POR UN REENVIO?')">Pista</button>
+
+                                <button data-mdb-ripple-init class="btn btn-primary" id="error07" onclick="Decremento()"
+                                    type="button">Escoger</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 mb-4 mb-lg-0 d-none d-lg-block">
+                        <div class="card">
+                            <img src="/static/imagenes/correcto03.png" class="card-img-top" alt="correcto03.png" />
+                            <div class="card-body">
+                                <h5 class="card-title">Roblox</h5>
+                                <p class="card-text">
+                                    Al parecer debo resetear mi contraseña para entrar a jugar...
+                                </p>
+                                <button data-mdb-ripple-init class="btn btn-secondary"
+                                    onmouseover="alert('PERO EL REMITENTE PODRIA NO SER ROBLOX...')">Pista</button>
+
+                                <button data-mdb-ripple-init class="btn btn-primary" id="acierto04"
+                                    onclick="Incremento()" type="button">Escoger</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 mb-4 mb-lg-0 d-none d-lg-block">
+                        <div class="card">
+                            <img src="/static/imagenes/ejemplo08.jpg" class="card-img-top" alt="ejemplo08.jpg" />
+                            <div class="card-body">
+                                <h5 class="card-title">Santander</h5>
+                                <p class="card-text">
+                                    Mi targeta bancaria fue bloqueda y debo ingresar mis datos para desbloquearla...
+                                </p>
+                                <button data-mdb-ripple-init class="btn btn-secondary"
+                                    onmouseover="alert('PERO LA URL PODRIA NO SER SEGURA...')">Pista</button>
+
+                                <button data-mdb-ripple-init class="btn btn-primary" id="error08" onclick="Decremento()"
+                                    type="button">Escoger</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Inner -->
+</div>
+<!-- Carousel wrapper -->
+
+<script>
+    let puntaje = 0;
+
+    window.onload = function () {
+        agregarEventos(); // Llamar a esta función al cargar la página
+    };
+
+    function agregarEventos() {
+        const aciertos = [
+            document.getElementById("acierto01"),
+            document.getElementById("acierto02"),
+            document.getElementById("acierto03"),
+            document.getElementById("acierto04")
+        ];
+
+        aciertos.forEach(function (btn) {
+            if (btn) {
+                btn.addEventListener("click", manejarAcierto, { once: true });
+            }
+        });
+
+        const fallos = [
+            document.getElementById("error01"),
+            document.getElementById("error02"),
+            document.getElementById("error03"),
+            document.getElementById("error04"),
+            document.getElementById("error05"),
+            document.getElementById("error06"),
+            document.getElementById("error07"),
+            document.getElementById("error08")
+        ];
+
+        fallos.forEach(function (btn) {
+            if (btn) {
+                btn.addEventListener("click", manejarError, { once: true });
+            }
+        });
+    }
+
+    function manejarAcierto(event) {
+        const btn = event.target;
+        btn.disabled = true; // Deshabilita antes de la alerta para evitar doble clic
+        puntaje++;
+        alert("¡Acierto! Puntaje: " + puntaje);
+    }
+
+    function manejarError(event) {
+        const btn = event.target;
+        btn.disabled = true; // Deshabilita antes de la alerta para evitar doble clic
+        puntaje--;
+        alert("¡Error! Puntaje: " + puntaje);
+    }
+
+    function calcularPuntaje() {
+        if (puntaje === 4) {
+            alert("Felicidades, eres un experto en Phishing. Tu puntaje máximo es: " + puntaje + " (〜￣▽￣)〜");
+        } else if (puntaje < 4 && puntaje > 0) {
+            alert("Deberías repasar algunos conceptos antes de realizar la prueba. Tu puntaje es: " + puntaje + " ≡(▔﹏▔)≡");
+        } else if (puntaje < 0) {
+            alert("¡Cuidado! Serías la primer persona a la que estafarían. Tu puntaje negativo es: " + puntaje + " (ㆆ_ㆆ)");
+        } else {
+            alert("Error, algo salió mal.");
+        }
+    }
+
+    function reiniciarPuntaje() {
+        puntaje = 0;
+        alert("Prueba reiniciada");
+
+        // Habilitar todos los botones nuevamente
+        document.querySelectorAll("button").forEach(btn => {
+            btn.disabled = false;
+        });
+
+        // Volver a agregar los eventos a los botones
+        agregarEventos();
+    }
+</script>
+
+<div class="d-flex p-4 justify-content-evenly">
+    <button class="btn btn-primary btn-lg btn-custom" onclick="calcularPuntaje()">Obtener Puntaje</button>
+    <button class="btn btn-danger btn-lg btn-custom" onclick="reiniciarPuntaje()">Reiniciar Prueba</button>
+</div>

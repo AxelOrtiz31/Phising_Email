@@ -1,9 +1,14 @@
 $def with (nombre, correo)
 
-<h1>Bienvenido Querido Usuario</h1>
-<p>$nombre</p>
-<p>$correo</p>
 <link href="../assets/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+
+<div class="d-flex align-items-center p-3 my-3 text-dark  rounded shadow-sm" style="background-color:#c0ddf1 ;">
+    <div class="lh-1">
+      <h1 class="h6 mb-0 text-black lh-1">Bienvenido $nombre</h1>
+      <br>
+      <small> $correo</small>
+    </div>
+</div>
 
 <style>
     .bd-placeholder-img {
@@ -58,22 +63,7 @@ $def with (nombre, correo)
         -webkit-overflow-scrolling: touch;
     }
 
-    .btn-bd-primary {
-        --bd-violet-bg: #712cf9;
-        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
-
-        --bs-btn-font-weight: 600;
-        --bs-btn-color: var(--bs-white);
-        --bs-btn-bg: var(--bd-violet-bg);
-        --bs-btn-border-color: var(--bd-violet-bg);
-        --bs-btn-hover-color: var(--bs-white);
-        --bs-btn-hover-bg: #6528e0;
-        --bs-btn-hover-border-color: #6528e0;
-        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
-        --bs-btn-active-color: var(--bs-btn-hover-color);
-        --bs-btn-active-bg: #5a23c8;
-        --bs-btn-active-border-color: #5a23c8;
-    }
+    
 
     .bd-mode-toggle {
         z-index: 1500;
@@ -82,37 +72,38 @@ $def with (nombre, correo)
     .bd-mode-toggle .dropdown-menu .active .bi {
         display: block !important;
     }
+
+    .card:hover {
+    transform: scale(1.03); /* Aumenta el tamaño un 10% */
+    transition: transform 0.5s ease-in-out;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Sombra para resaltar */
+}
 </style>
 
 
 
-
-
+<div class="p-4 p-md-5 mb-4 rounded text-body-emphasis" style="background-color: #d6eaf8">
+    <div class="col-lg-10 px-0">
+      <h1 class="display-4 fst-italic">🛡️ Protege tu Información: Aprende a Identificar el Phishing</h1>
+      <p class="lead my-3">A continuación, te mostramos algunas señales clave para
+        identificar correos electrónicos de phishing y evitar caer en estafas.
+    </p>
+    </div>
+</div>
 
 <main>
 
-    <section class="py-5 text-center container">
-        <div class="row py-lg-5">
-            <div class="col-lg-6 col-md-8 mx-auto">
-                <h1 class="fw-light">Ejemplos del Phishing</h1>
-                <p class="lead text-body-secondary">Pon aprueba tu conocimiento</p>
-                <p>
-                    <a href="/usuarioContenido/ejercicios" class="btn btn-primary my-2">Practicar</a>
-                    <a href="#" class="btn btn-secondary my-2">Ver mas</a>
-                </p>
-            </div>
-        </div>
-    </section>
 
-    <div class="album py-5 bg-body-tertiary">
+
+    <div class="album py-5" style="background-color: #e6f9f6">
         <div class="container">
 
             <div class="row d-flex flex-wrap justify-content-center gap-3">
                 <div class="row d-flex flex-wrap justify-content-center gap-3">
                     <div class="row d-flex flex-wrap">
                         <div class="col-md-6 col-lg-6">
-                            <div class="card shadow-sm" style="width: 100%;">
-                                <img src="/static/imagenes/captura01.png" class="img-fluid w-100" alt="Sample image">
+                            <div class="card shadow-sm" style="width: 100%; background-color: #d4dddf">
+                                <img src="/static/imagenes/captura01.png" class="img-fluid w-100 rounded-top" alt="Sample image">
                                 <div class="card-body">
                                     <p class="card-text">¿Qué tiene de malo este correo?</p>
                                     <div>
@@ -144,8 +135,8 @@ $def with (nombre, correo)
                         </div>
 
                         <div class="col-md-6 col-lg-6">
-                            <div class="card shadow-sm" style="width: 100%;">
-                                <img src="/static/imagenes/captura02.png" class="img-fluid w-100" alt="Sample image">
+                            <div class="card shadow-sm" style="width: 100%; background-color: #d4dddf">
+                                <img src="/static/imagenes/captura02.png" class="img-fluid w-100 rounded-top" alt="Sample image">
                                 <div class="card-body">
                                     <p class="card-text">¿Qué tiene de malo este correo?</p>
                                     <small class="text-body-secondary">Un usuario recibe un email diciendo que ha
@@ -178,33 +169,39 @@ $def with (nombre, correo)
 
                     <div class="row d-flex flex-wrap">
                         <div class="col-md-6 col-lg-6">
-                            <div class="card shadow-sm" style="width: 100%;">
-                                <img src="/static/imagenes/captura03.png" class="img-fluid w-100" alt="Sample image">
+                            <div class="card shadow-sm" style="width: 100%; background-color: #d4dddf">
+                                <img src="/static/imagenes/captura03.png" class="img-fluid w-100 rounded-top" alt="Sample image">
                                 <div class="card-body">
                                     <p class="card-text">¿Qué tiene de malo este correo?</p>
-                                    <small class="text-body-secondary">Recibes un email diciendo que la ONU te ha seleccionado para recibir 2.500.000
-                                         dólares como compensación por la pandemia. Mencionan a la UE, EE. UU., el FMI y el Banco Mundial para que suene creíble.
+                                    <small class="text-body-secondary">Recibes un email diciendo que la ONU te ha
+                                        seleccionado para recibir 2.500.000
+                                        dólares como compensación por la pandemia. Mencionan a la UE, EE. UU., el FMI y
+                                        el Banco Mundial para que suene creíble.
                                     </small>
 
                                     <div>
                                         <br>
                                         <h6>Te piden datos personales.</h6>
                                         <ul>
-                                            <li><small class="text-body-secondary">Dicen que debes contactarlos y enviar información privada.
+                                            <li><small class="text-body-secondary">Dicen que debes contactarlos y enviar
+                                                    información privada.
                                                 </small>
                                             </li>
-                                            <li><small class="text-body-secondary">Te piden que no lo compartas, esto es una táctica común para evitar que alguien te advierta del engaño.
+                                            <li><small class="text-body-secondary">Te piden que no lo compartas, esto es
+                                                    una táctica común para evitar que alguien te advierta del engaño.
                                                 </small>
                                             </li>
-                                            <li><small class="text-body-secondary">Urgencia y presión, te dicen que actúes rápido para no perder la "oportunidad".
+                                            <li><small class="text-body-secondary">Urgencia y presión, te dicen que
+                                                    actúes rápido para no perder la "oportunidad".
                                                 </small>
                                             </li>
                                         </ul>
                                         <hr>
                                         <h6>⚠ Recuerda</h6>
                                         <ul>
-                                            <li><small class="text-body-secondary">Si un email te promete dinero inesperado y te pide información personal, 
-                                                es phishing. No respondas y elimínalo. 🚨
+                                            <li><small class="text-body-secondary">Si un email te promete dinero
+                                                    inesperado y te pide información personal,
+                                                    es phishing. No respondas y elimínalo. 🚨
 
                                                 </small>
                                             </li>
@@ -214,29 +211,32 @@ $def with (nombre, correo)
                             </div>
                         </div>
                         <div class="col-md-6 col-lg-6">
-                            <div class="card shadow-sm" style="width: 100%;">
-                                <img src="/static/imagenes/Phishing.jpg" class="img-fluid w-100" alt="Sample image">
+                            <div class="card shadow-sm" style="width: 100%; background-color: #d4dddf">
+                                <img src="/static/imagenes/correo03.jpg" class="img-fluid w-100 rounded-top" alt="Sample image">
                                 <div class="card-body">
                                     <p class="card-text">¿Qué tiene de malo este correo?</p>
-                                    <small class="text-body-secondary">Un usuario recibe un email diciendo que ha
-                                        acumulado
-                                        puntos en Amazon y que, como recompensa, puede comprar un Samsung Galaxy S20 por
-                                        solo 1,50 euros.
+                                    <small class="text-body-secondary">Un usuario recibe un email falso de "Endesa".
                                     </small>
 
                                     <div>
                                         <br>
-                                        <h6>El remitente no es de Amazon.</h6>
+                                        <h6> Enlace peligroso</h6>
                                         <ul>
-                                            <li><small class="text-body-secondary">Si revisas la dirección del correo,
-                                                    verás que no proviene de @amazon.com.
+                                            <li><small class="text-body-secondary">"Haga clic aquí" no muestra adónde te llevará. Podría ser una página falsa que roba tus datos.
                                                 </small>
                                             </li>
                                         </ul>
                                         <hr>
-                                        <h6>La oferta es demasiado buena para ser verdad.</h6>
+                                        <h6>Falsa amenaza de costo</h6>
                                         <ul>
-                                            <li><small class="text-body-secondary">Nadie regala smartphones casi gratis.
+                                            <li><small class="text-body-secondary">Dicen que si no recoges la carta, te cobrarán 9,79 euros al día. Es una táctica para asustarte y hacer que actúes rápido.
+                                                </small>
+                                            </li>
+                                        </ul>
+                                        <hr>
+                                        <h6> El remitente es sospechoso</h6>
+                                        <ul>
+                                            <li><small class="text-body-secondary">Aunque dice ser de "Endesa Clientes", su dirección de correo es desconocida. Las empresas oficiales usan correos con su dominio, como @endesa.com.
                                                 </small>
                                             </li>
                                         </ul>
@@ -244,80 +244,114 @@ $def with (nombre, correo)
                                 </div>
                             </div>
                         </div>
-
                     </div>
 
-                    <div class="col">
-                        <div class="card shadow-sm">
-                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
-                                xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 55555555"
-                                preserveAspectRatio="xMidYMid slice" focusable="false">
-                                <title>Placeholder</title>
-                                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
-                                    dy=".3em">555555555555555</text>
-                            </svg>
-                            <div class="card-body">
-                                <p class="card-text">6666666666666666666666666666666666666</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button"
-                                            class="btn btn-sm btn-outline-secondary">7777777777777777</button>
-                                        <button type="button"
-                                            class="btn btn-sm btn-outline-secondary">888888888888888</button>
+                        <div class="row d-flex flex-wrap">
+                            <div class="col-md-6 col-lg-6">
+                                <div class="card shadow-sm" style="width: 100%; background-color: #d4dddf">
+                                    <img src="/static/imagenes/correo01.jpeg" class="img-fluid w-100 rounded-top"
+                                        alt="Sample image">
+                                    <div class="card-body">
+                                        <p class="card-text">¿Qué tiene de malo este correo?</p>
+                                        <small class="text-body-secondary">Te explico algunos puntos sospechosos en esta imagen:</small>
+                                        <div>
+                                            <br>
+                                            <h6>Dirección de correo falsa</h6>
+                                            <ul>
+                                                <li><small class="text-body-secondary">Viene de un correo con dominio @hotmail.com, pero una entidad oficial debería usar un correo institucional (como @gob.mx o @hacienda.gob.mx).</small>
+                                                </li>
+                                            </ul>
+                                            <hr>
+                                            <h6>Botón de descarga sospechoso</h6>
+                                            <ul>
+                                                <li><small class="text-body-secondary">Dice "Descargar todo como .zip archivos adjuntos". Es extraño que una autoridad fiscal envíe un ZIP en lugar de un PDF directo. Estos archivos pueden contener virus.
+                                                    </small>
+                                                </li>
+                                            </ul>
+                                            <hr>
+                                            <h6>Errores en el mensaje</h6>
+                                            <ul>
+                                                <li><small class="text-body-secondary">Frases como "se anexa el siguiente comprobante fiscal digital" o "A quien corresponda" suenan poco formales para una entidad tributaria real.</small>
+                                                </li>
+                                                <li><small class="text-body-secondary">Fecha de emisión: 28/01/2020, pero el correo llega en 2021, lo que no tiene sentido.</small>
+                                                </li>
+                                            </ul>
+                                            <hr>
+                                            <h6>Número de teléfono sospechoso</h6>
+                                            <ul>
+                                                <li><small class="text-body-secondary">No es un número oficial ni tiene el formato correcto de un servicio de impuestos.
+                                                    </small>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                    <small class="text-body-secondary">99999999999</small>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-lg-6">
+                                <div class="card shadow-sm" style="width: 100%; background-color: #d4dddf">
+                                    <img src="/static/imagenes/correo02.jpeg" class="img-fluid w-100 rounded-top"
+                                        alt="Sample image">
+                                    <div class="card-body">
+                                        <p class="card-text">¿Qué tiene de malo este correo?</p>
+                                        <small class="text-body-secondary">Te explico por qué es sospechoso:
+                                        </small>
+
+                                        <div>
+                                            <br>
+                                            
+                                            
+                                            <h6>Errores de ortografía y puntuación</h6>
+                                            <ul>
+                                                <li><small class="text-body-secondary">Frases como "Favor de realizar la verificación de su identidad en el siguiente enlace proporcionado a continuación ." tienen errores y no suenan profesionales. Un banco real revisa bien sus mensajes.
+                                                    </small>
+                                                </li>
+                                            </ul>
+                                            <hr>
+                                            <h6>Mensaje alarmante para presionarte</h6>
+                                            <ul>
+                                                <li><small class="text-body-secondary">Dicen que tu usuario ha sido bloqueado por “actividad inusual”, lo que te hace sentir urgencia de hacer clic en el enlace sin pensar mucho.
+                                                    </small>
+                                                </li>
+                                            </ul>
+                                            <hr>
+                                            <h6>Enlace engañoso</h6>
+                                            <ul>
+                                                <li><small class="text-body-secondary">Parece que el enlace es de banorte.com, pero al pasar el cursor sobre él, en realidad dirige a panchkon.com/include/links-php, que no tiene relación con el banco. Esto es una táctica común para robar tus datos.
+                                                    </small>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col">
-                        <div class="card shadow-sm">
-                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
-                                xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 10"
-                                preserveAspectRatio="xMidYMid slice" focusable="false">
-                                <title>Placeholder</title>
-                                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
-                                    dy=".3em">1010101010</text>
-                            </svg>
-                            <div class="card-body">
-                                <p class="card-text">1111111111</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button"
-                                            class="btn btn-sm btn-outline-secondary">12121212121</button>
-                                        <button type="button"
-                                            class="btn btn-sm btn-outline-secondary">131313131313</button>
-                                    </div>
-                                    <small class="text-body-secondary"> 1414141414141414</small>
-                                </div>
-                            </div>
+                </div>
+
+                <section class="py-5 text-center container">
+                    <div class="row py-lg-5">
+                        <div class="col-lg-6 col-md-8 mx-auto">
+                            <h1 class="fw-light">Ejemplos del Phishing</h1>
+                            <p class="lead text-body-secondary">Pon aprueba tu conocimiento</p>
+                            <p>
+                                <a href="/usuarioContenido/ejercicios" class="btn btn-primary my-2">Practicar</a>
+                                <a href="https://youtu.be/t3WrAb3xI88?si=jYqwCxjxlVjaPyh6" target="_blank" class="btn btn-secondary my-2">Ver mas</a>
+                            </p>
                         </div>
                     </div>
-                    <div class="col">
-                        <div class="card shadow-sm">
-                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
-                                xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 515151515151"
-                                preserveAspectRatio="xMidYMid slice" focusable="false">
-                                <title>Placeholder</title>
-                                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
-                                    dy=".3em">515151515151515</text>
-                            </svg>
-                            <div class="card-body">
-                                <p class="card-text">1515151515151515151</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button"
-                                            class="btn btn-sm btn-outline-secondary">1616161616161</button>
-                                        <button type="button"
-                                            class="btn btn-sm btn-outline-secondary">1717171711771</button>
-                                    </div>
-                                    <small class="text-body-secondary">202020202020202</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                </section>
+
+            </div>
+        </div>
+    </div>
+
 
 </main>
+
+
+
+
 
 
 <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
