@@ -3,3 +3,323 @@ $def with (nombre, correo)
 <h1>Bienvenido Querido Usuario</h1>
 <p>$nombre</p>
 <p>$correo</p>
+<link href="../assets/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+
+<style>
+    .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+    }
+
+    @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+        }
+    }
+
+    .b-example-divider {
+        width: 100%;
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+    }
+
+    .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+    }
+
+    .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+    }
+
+    .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+    }
+
+    .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .btn-bd-primary {
+        --bd-violet-bg: #712cf9;
+        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+        --bs-btn-font-weight: 600;
+        --bs-btn-color: var(--bs-white);
+        --bs-btn-bg: var(--bd-violet-bg);
+        --bs-btn-border-color: var(--bd-violet-bg);
+        --bs-btn-hover-color: var(--bs-white);
+        --bs-btn-hover-bg: #6528e0;
+        --bs-btn-hover-border-color: #6528e0;
+        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+        --bs-btn-active-color: var(--bs-btn-hover-color);
+        --bs-btn-active-bg: #5a23c8;
+        --bs-btn-active-border-color: #5a23c8;
+    }
+
+    .bd-mode-toggle {
+        z-index: 1500;
+    }
+
+    .bd-mode-toggle .dropdown-menu .active .bi {
+        display: block !important;
+    }
+</style>
+
+
+
+
+
+
+<main>
+
+    <section class="py-5 text-center container">
+        <div class="row py-lg-5">
+            <div class="col-lg-6 col-md-8 mx-auto">
+                <h1 class="fw-light">Ejemplos del Phishing</h1>
+                <p class="lead text-body-secondary">Pon aprueba tu conocimiento</p>
+                <p>
+                    <a href="/usuarioContenido/ejercicios" class="btn btn-primary my-2">Practicar</a>
+                    <a href="#" class="btn btn-secondary my-2">Ver mas</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <div class="album py-5 bg-body-tertiary">
+        <div class="container">
+
+            <div class="row d-flex flex-wrap justify-content-center gap-3">
+                <div class="row d-flex flex-wrap justify-content-center gap-3">
+                    <div class="row d-flex flex-wrap">
+                        <div class="col-md-6 col-lg-6">
+                            <div class="card shadow-sm" style="width: 100%;">
+                                <img src="/static/imagenes/captura01.png" class="img-fluid w-100" alt="Sample image">
+                                <div class="card-body">
+                                    <p class="card-text">¿Qué tiene de malo este correo?</p>
+                                    <div>
+                                        <h6>El remitente no es oficial</h6>
+                                        <ul>
+                                            <li><small class="text-body-secondary">El correo proviene de
+                                                    amazon.service@013802mail.com.</small>
+                                            </li>
+                                            <li><small class="text-body-secondary">Amazon nunca usa correos tan
+                                                    extraños,
+                                                    siempre tienen direcciones como @amazon.com.</small>
+                                            </li>
+                                        </ul>
+                                        <hr>
+                                        <h6>El asunto está exagerado y usa muchos signos de exclamación</h6>
+                                        <ul>
+                                            <li><small class="text-body-secondary">Dice: "Amazon Account -- SUSPENDED
+                                                    !!!"
+                                                </small>
+                                            </li>
+                                            <li><small class="text-body-secondary">Un correo legítimo de Amazon sería
+                                                    más formal y claro, como:
+                                                    ✅ "Problema con tu cuenta de Amazon – Acción requerida"</small>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-6">
+                            <div class="card shadow-sm" style="width: 100%;">
+                                <img src="/static/imagenes/captura02.png" class="img-fluid w-100" alt="Sample image">
+                                <div class="card-body">
+                                    <p class="card-text">¿Qué tiene de malo este correo?</p>
+                                    <small class="text-body-secondary">Un usuario recibe un email diciendo que ha
+                                        acumulado
+                                        puntos en Amazon y que, como recompensa, puede comprar un Samsung Galaxy S20 por
+                                        solo 1,50 euros.
+                                    </small>
+
+                                    <div>
+                                        <br>
+                                        <h6>El remitente no es de Amazon.</h6>
+                                        <ul>
+                                            <li><small class="text-body-secondary">Si revisas la dirección del correo,
+                                                    verás que no proviene de @amazon.com.
+                                                </small>
+                                            </li>
+                                        </ul>
+                                        <hr>
+                                        <h6>La oferta es demasiado buena para ser verdad.</h6>
+                                        <ul>
+                                            <li><small class="text-body-secondary">Nadie regala smartphones casi gratis.
+                                                </small>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row d-flex flex-wrap">
+                        <div class="col-md-6 col-lg-6">
+                            <div class="card shadow-sm" style="width: 100%;">
+                                <img src="/static/imagenes/captura03.png" class="img-fluid w-100" alt="Sample image">
+                                <div class="card-body">
+                                    <p class="card-text">¿Qué tiene de malo este correo?</p>
+                                    <small class="text-body-secondary">Recibes un email diciendo que la ONU te ha seleccionado para recibir 2.500.000
+                                         dólares como compensación por la pandemia. Mencionan a la UE, EE. UU., el FMI y el Banco Mundial para que suene creíble.
+                                    </small>
+
+                                    <div>
+                                        <br>
+                                        <h6>Te piden datos personales.</h6>
+                                        <ul>
+                                            <li><small class="text-body-secondary">Dicen que debes contactarlos y enviar información privada.
+                                                </small>
+                                            </li>
+                                            <li><small class="text-body-secondary">Te piden que no lo compartas, esto es una táctica común para evitar que alguien te advierta del engaño.
+                                                </small>
+                                            </li>
+                                            <li><small class="text-body-secondary">Urgencia y presión, te dicen que actúes rápido para no perder la "oportunidad".
+                                                </small>
+                                            </li>
+                                        </ul>
+                                        <hr>
+                                        <h6>⚠ Recuerda</h6>
+                                        <ul>
+                                            <li><small class="text-body-secondary">Si un email te promete dinero inesperado y te pide información personal, 
+                                                es phishing. No respondas y elimínalo. 🚨
+
+                                                </small>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-6">
+                            <div class="card shadow-sm" style="width: 100%;">
+                                <img src="/static/imagenes/Phishing.jpg" class="img-fluid w-100" alt="Sample image">
+                                <div class="card-body">
+                                    <p class="card-text">¿Qué tiene de malo este correo?</p>
+                                    <small class="text-body-secondary">Un usuario recibe un email diciendo que ha
+                                        acumulado
+                                        puntos en Amazon y que, como recompensa, puede comprar un Samsung Galaxy S20 por
+                                        solo 1,50 euros.
+                                    </small>
+
+                                    <div>
+                                        <br>
+                                        <h6>El remitente no es de Amazon.</h6>
+                                        <ul>
+                                            <li><small class="text-body-secondary">Si revisas la dirección del correo,
+                                                    verás que no proviene de @amazon.com.
+                                                </small>
+                                            </li>
+                                        </ul>
+                                        <hr>
+                                        <h6>La oferta es demasiado buena para ser verdad.</h6>
+                                        <ul>
+                                            <li><small class="text-body-secondary">Nadie regala smartphones casi gratis.
+                                                </small>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                                xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 55555555"
+                                preserveAspectRatio="xMidYMid slice" focusable="false">
+                                <title>Placeholder</title>
+                                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+                                    dy=".3em">555555555555555</text>
+                            </svg>
+                            <div class="card-body">
+                                <p class="card-text">6666666666666666666666666666666666666</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button"
+                                            class="btn btn-sm btn-outline-secondary">7777777777777777</button>
+                                        <button type="button"
+                                            class="btn btn-sm btn-outline-secondary">888888888888888</button>
+                                    </div>
+                                    <small class="text-body-secondary">99999999999</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                                xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 10"
+                                preserveAspectRatio="xMidYMid slice" focusable="false">
+                                <title>Placeholder</title>
+                                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+                                    dy=".3em">1010101010</text>
+                            </svg>
+                            <div class="card-body">
+                                <p class="card-text">1111111111</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button"
+                                            class="btn btn-sm btn-outline-secondary">12121212121</button>
+                                        <button type="button"
+                                            class="btn btn-sm btn-outline-secondary">131313131313</button>
+                                    </div>
+                                    <small class="text-body-secondary"> 1414141414141414</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                                xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 515151515151"
+                                preserveAspectRatio="xMidYMid slice" focusable="false">
+                                <title>Placeholder</title>
+                                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+                                    dy=".3em">515151515151515</text>
+                            </svg>
+                            <div class="card-body">
+                                <p class="card-text">1515151515151515151</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button"
+                                            class="btn btn-sm btn-outline-secondary">1616161616161</button>
+                                        <button type="button"
+                                            class="btn btn-sm btn-outline-secondary">1717171711771</button>
+                                    </div>
+                                    <small class="text-body-secondary">202020202020202</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+</main>
+
+
+<script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
