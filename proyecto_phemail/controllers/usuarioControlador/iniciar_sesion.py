@@ -9,7 +9,7 @@ render = web.template.render("views", base="master")
 # Página de Inicio de Sesion
 class IniciarSesion:
     def GET(self):
-        return render.usuarioContenido.iniciar_sesion()
+        return render.usuarioContenido.iniciar_sesion(message=None)
 
     def POST(self):
         datos = web.input()
@@ -43,3 +43,7 @@ class IniciarSesion:
             # Construir la URL con los datos
             url = f"{BASE_URL}/usuarioContenido/phishing?nombre={inicio_usuario['nombre']}&correo={inicio_usuario['correo']}"
             raise web.seeother(url)
+
+        else:
+            message = "Correo o contraseña incorrectos. Inténtalo de nuevo."
+            return render.usuarioContenido.iniciar_sesion(message=message)  # Envía el mensaje de error a la plantilla

@@ -1,230 +1,275 @@
-$def with (message)
+<nav class="navbar" style="background-color: #1e9fc6;">
+    <div class="container-fluid">
 
-<div style="display: flex; justify-content: center; flex-direction: column; align-items: center;">
-
-
-
-
-  <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
-    <symbol id="aperture" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-      stroke-width="2" viewBox="0 0 24 24">
-      <circle cx="12" cy="12" r="10" />
-      <path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94" />
-    </symbol>
-    <symbol id="cart" viewBox="0 0 16 16">
-      <path
-        d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
-    </symbol>
-    <symbol id="chevron-right" viewBox="0 0 16 16">
-      <path fill-rule="evenodd"
-        d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
-    </symbol>
-  </svg>
-
-
-  <section>
-    <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis position-relative"
-      style=" overflow: hidden; min-height: 500px; min-width: 80%;">
-      <video autoplay muted loop class="position-absolute top-0 start-0 w-100 h-100"
-        style="object-fit: cover; z-index: -1;">
-        <source src="../static/videos/video01.mp4" type="video/mp4">
-        Tu navegador no soporta el video.
-      </video>
-      <div class="col-lg-4 px-0 position-relative" style="z-index: 1;">
-        <h1 class="fw-bold display-1 fst-italic">Phishing</h1>
-        <p class="text-black lead my-3 fs-4 fw-semibold"><mark>El phishing es una técnica utilizada por los ciberdelincuentes que consiste en engañar a
-          las personas haciéndose pasar por una empresa o servicio de confianza.</mark></p>
-        <p class="lead mb-0">
-          <a style="text-shadow: 4ch #ffffff; -webkit-text-stroke: 1px rgba(58, 65, 160, 0.71);" href="https://support.microsoft.com/es-es/windows/prot%C3%A9jase-del-phishing-0c7ea947-ba98-3bd9-7184-430e1f860a44#:~:text=El%20phishing%20es%20un%20ataque,que%20fingen%20ser%20sitios%20leg%C3%ADtimos." target="_blank">
-            <pre class="lead fw-bold fs-4">Continua leyendo...</pre>
-          </a>
-        </p>
-      </div>
-    </div>
-
-
-    <div class="row mb-2">
-      <div class="col-md-6 ">
-        <div
-          class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative bg-info-subtle">
-          <div class="col p-4 d-flex flex-column position-static">
-            <strong class="d-inline-block mb-2 text-primary-emphasis">Ciberseguridad</strong>
-            <h3 class="mb-0">Alerta de Phishing</h3>
-            <div class="mb-1 text-body-secondary">Mar 4</div>
-            <p class="card-text mb-auto">Estos correos suelen parecer legítimos, imitando empresas o servicios de
-              confianza, e incluyen enlaces o archivos adjuntos maliciosos.</p>
-            <a href="https://www.malwarebytes.com/es/cybersecurity/basics/phishing-email" target="_blank" class="icon-link gap-1 icon-link-hover">
-              Continua leyendo...
-              <svg class="bi">
-                <use xlink:href="#chevron-right" />
-              </svg>
-            </a>
-          </div>
-          <div class="col-auto d-none d-lg-block p-2">
-            <img src="../static/imagenes/tarjetas.jpeg" alt="Descripción de la imagen" width="250" class="img-fluid">
-          </div>
+        <a class="navbar-brand" href="/">
+            <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-house-fill"
+                viewBox="0 0 16 16">
+                <path
+                    d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293z" />
+                <path d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293z" />
+            </svg>
+        </a>
+        <div class="d-flex">
+            <a class="btn btn-light" href="/usuarioContenido/registro">Registro</a>
+            <a class="btn btn-light ms-5" href="/usuarioContenido/iniciar_sesion">Inicio de Sesión</a>
         </div>
-      </div>
-      <div class="col-md-6">
-        <div
-          class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative bg-info-subtle">
-          <div class="col p-4 d-flex flex-column position-static">
-            <strong class="d-inline-block mb-2 text-success-emphasis">Seguridad Digital</strong>
-            <h3 class="mb-0">Protege tu Información</h3>
-            <div class="mb-1 text-body-secondary">Mar 4 </div>
-            <p class="mb-auto">Los ciberdelincuentes utilizan técnicas de diseño persuasivo para hacer que los correos
-              de phishing luzcan legítimos. Estos mensajes suelen imitar la apariencia de empresas reales.
-            </p>
-            <a href="https://www.incibe.es/empresas/blog/ingenieria-social-tecnicas-utilizadas-los-ciberdelincuentes-y-protegerse" target="_blank" class="icon-link gap-1 icon-link-hover">
-              Continua leyendo...
-              <svg class="bi">
-                <use xlink:href="#chevron-right" />
-              </svg>
-            </a>
-          </div>
-          <div class="col-auto d-none d-lg-block align-self-center pe-2">
-            <img src="../static/imagenes/laptop.jpeg" alt="Descripción de la imagen" width="250" class="img-fluid">
-          </div>          
-        </div>
-      </div>
     </div>
-  
-    <div class="row g-5">
-      <div class="col-md-8">
-        <h3 class="pb-4 mb-4 fst-italic border-bottom">
-          Desde la Ciberseguridad
-        </h3>
+</nav>
 
-        <article class="blog-post rounded p-4 mb-4" style="background-color: #d6eaf8;">
-          <h2 class="display-5 link-body-emphasis mb-1">Phishing a través de Correos Cebo</h2>
-          <p class="blog-post-meta">Marzo 4, 2025 por Los <a href="#">Capitos</a></p>
+<div class="container mt-4">
 
-          <p>Este artículo muestra algunos de los métodos más comunes utilizados en correos cebo
-            para ataques de phishing. Exploraremos cómo los atacantes diseñan sus mensajes, qué
-            elementos utilizan para engañar y cómo puedes protegerte.
-          </p>
-          <hr>
-
-          <p>Los correos cebo pueden incluir contenido bien elaborado con imágenes, enlaces y textos persuasivos. A
-            menudo imitan a empresas
-            legítimas y solicitan que la víctima haga clic en un enlace malicioso o proporcione información
-            confidencial.</h2>
-          <p>🔍 ¡Mantente alerta y no caigas en la trampa del phishing!
-          </p>
-          <blockquote class="blockquote">
-            <p>Ejemplo</p>
-          </blockquote>
-          <p>Este es un ejemplo de cómo los ciberdelincuentes estructuran sus mensajes para hacerlos más convincentes.
-            Analizaremos cada uno de sus componentes y repetiremos ciertos patrones para que aprendas a identificarlos
-            con facilidad.</p>
-          <h3>Ejemplo de Listas en Correos de Phishing</h3>
-          <p>Esta es una lista no ordenada de señales de alerta en correos electrónicos cebo:</p>
-          <ul>
-            <li>Remitente sospechoso con direcciones de correo poco confiables.</li>
-            <li>Enlaces fraudulentos que parecen legítimos pero llevan a sitios maliciosos.</li>
-            <li>Mensajes urgentes que intentan presionar al usuario para actuar rápidamente.</li>
-          </ul>
-          <p>Y esta es una lista ordenada de pasos para evitar caer en el phishing:</p>
-          <ol>
-            <li>Verifica la dirección del remitente antes de hacer clic en cualquier enlace.</li>
-            <li>Pasa el cursor sobre los enlaces para comprobar si coinciden con el destino real.</li>
-            <li>Busca errores ortográficos o gramaticales, ya que pueden ser una señal de phishing.</li>
-          </ol>
-          <p>Y esta es una lista de definiciones sobre phishing:</p>
-          <dl>
-            <dt>📧 Correo Cebo</dt>
-            <dd>Un mensaje fraudulento diseñado para engañar y robar información personal.</dd>
-            <dt>🔗 Enlace Malicioso</dt>
-            <dd>Un vínculo disfrazado que redirige a una página falsa para robar credenciales.</dd>
-            <dt>🎭 Suplantación de Identidad (Spoofing)</dt>
-            <dd>Una técnica en la que los atacantes falsifican la identidad del remitente para parecer legítimos.</dd>
-          </dl>
-
-        </article>
+    <div style="display: flex; justify-content: center; flex-direction: column; align-items: center;">
 
 
 
-        <nav class="blog-pagination col-md-10 d-flex justify-content-end" aria-label="Pagination">
-          <a class="btn btn-outline-primary rounded-pill" href="#">Inicio</a>
-        </nav>
 
-      </div>
-
-      <div class="col-md-4">
-        <div class="position-sticky rounded " style="top: 1rem;">
-          <div class="p-4 mb-3 rounded" style="background-color: #d6eaf8;">
-            <h4 class="fst-italic">Acerca de</h4>
-            <p class="mb-0">Este espacio está diseñado para educar a los usuarios sobre el phishing, con un enfoque
-              especial en los correos electrónicos cebo.
-              Aquí encontrarás información clave, ejemplos reales y consejos de seguridad para evitar caer en estafas
-              digitales.</p>
-          </div>
-
-          <div>
-            <h4 class="fst-italic">Publicaciones recientes</h4>
-            <ul class="list-unstyled">
-              <li>
-                <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top"
-                  href="https://consumidor.ftc.gov/articulos/como-reconocer-y-evitar-las-estafas-de-phishing#:~:text=Si%20recibe%20un%20email%20o,ser%20una%20estafa%20de%20phishing." target="_blank">
-                  <div class="col-auto d-none d-lg-block">
-                    <img src="../static/imagenes/index01.jpg" alt="Descripción de la imagen" width="200" height="262" class="img-fluid">
-                  </div>
-                  <div class="col-lg-8">
-                    <h6 class="mb-0">Cómo reconocer un correo de phishing</h6>
-                    <small class="text-body-secondary">15 de enero de 2024</small>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top"
-                  href="https://www.deltaprotect.com/blog/senales-identificacion-correos-falsos" target="_blank">
-                  <div class="col-auto d-none d-lg-block">
-                    <img src="../static/imagenes/correcto01.png" alt="Descripción de la imagen" width="200" height="262" class="img-fluid">
-                  </div>                  
-                  <div class="col-lg-8">
-                    <h6 class="mb-0">Señales de advertencia en correos electrónicos sospechosos
-                    </h6>
-                    <small class="text-body-secondary">14 de enero de 2024
-                    </small>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top"
-                  href="https://www.metacompliance.com/es/lp/ultimate-guide-phishing" target="_blank">
-                  <div class="col-auto d-none d-lg-block">
-                    <img src="../static/imagenes/hacker.png" alt="Descripción de la imagen" width="200" height="262" class="img-fluid">
-                  </div>
-                  <div class="col-lg-8">
-                    <h6 class="mb-0">Guía completa sobre phishing: Todo lo que debes saber</h6>
-                    <small class="text-body-secondary">13 de enero de 2024</small>
-                  </div>
-                </a>
-              </li>
-            </ul>
-          </div>
+        <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+            <symbol id="aperture" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                stroke-width="2" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="10" />
+                <path
+                    d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94" />
+            </symbol>
+            <symbol id="cart" viewBox="0 0 16 16">
+                <path
+                    d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+            </symbol>
+            <symbol id="chevron-right" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+            </symbol>
+        </svg>
 
 
+        <section>
+            <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis position-relative"
+                style=" overflow: hidden; min-height: 500px; min-width: 80%;">
+                <video autoplay muted loop class="position-absolute top-0 start-0 w-100 h-100"
+                    style="object-fit: cover; z-index: -1;">
+                    <source src="../static/videos/video01.mp4" type="video/mp4">
+                    Tu navegador no soporta el video.
+                </video>
+                <div class="col-lg-4 px-0 position-relative" style="z-index: 1;">
+                    <h1 class="fw-bold display-1 fst-italic">Phishing</h1>
+                    <p class="text-black lead my-3 fs-4 fw-semibold"><mark>El phishing es una técnica utilizada por los
+                            ciberdelincuentes que consiste en engañar a
+                            las personas haciéndose pasar por una empresa o servicio de confianza.</mark></p>
+                    <p class="lead mb-0">
+                        <a style="text-shadow: 4ch #ffffff; -webkit-text-stroke: 1px rgba(58, 65, 160, 0.71);"
+                            href="https://support.microsoft.com/es-es/windows/prot%C3%A9jase-del-phishing-0c7ea947-ba98-3bd9-7184-430e1f860a44#:~:text=El%20phishing%20es%20un%20ataque,que%20fingen%20ser%20sitios%20leg%C3%ADtimos."
+                            target="_blank">
+                            <pre class="lead fw-bold fs-4">Continua leyendo...</pre>
+                        </a>
+                    </p>
+                </div>
+            </div>
 
-          <div class="p-4">
-            <h4 class="fst-italic">En otra Parte</h4>
-            <ol class="list-unstyled">
-              <li><a href="https://github.com/topics/phishing" target="_blank">GitHub</a></li>
-              <li><a href="https://help.x.com/es/safety-and-security/fake-x-emails" target="_blank">Twitter</a></li>
-              <li><a href="https://es-es.facebook.com/help/phishing/" target="_blank">Facebook</a></li>
-            </ol>
-          </div>
-        </div>
-      </div>
+
+            <div class="row mb-2">
+                <div class="col-md-6 ">
+                    <div
+                        class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative bg-info-subtle">
+                        <div class="col p-4 d-flex flex-column position-static">
+                            <strong class="d-inline-block mb-2 text-primary-emphasis">Ciberseguridad</strong>
+                            <h3 class="mb-0">Alerta de Phishing</h3>
+                            <div class="mb-1 text-body-secondary">Mar 4</div>
+                            <p class="card-text mb-auto">Estos correos suelen parecer legítimos, imitando empresas o
+                                servicios de
+                                confianza, e incluyen enlaces o archivos adjuntos maliciosos.</p>
+                            <a href="https://www.malwarebytes.com/es/cybersecurity/basics/phishing-email"
+                                target="_blank" class="icon-link gap-1 icon-link-hover">
+                                Continua leyendo...
+                                <svg class="bi">
+                                    <use xlink:href="#chevron-right" />
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="col-auto d-none d-lg-block p-2">
+                            <img src="../static/imagenes/tarjetas.jpeg" alt="Descripción de la imagen" width="250"
+                                class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div
+                        class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative bg-info-subtle">
+                        <div class="col p-4 d-flex flex-column position-static">
+                            <strong class="d-inline-block mb-2 text-success-emphasis">Seguridad Digital</strong>
+                            <h3 class="mb-0">Protege tu Información</h3>
+                            <div class="mb-1 text-body-secondary">Mar 4 </div>
+                            <p class="mb-auto">Los ciberdelincuentes utilizan técnicas de diseño persuasivo para hacer
+                                que los correos
+                                de phishing luzcan legítimos. Estos mensajes suelen imitar la apariencia de empresas
+                                reales.
+                            </p>
+                            <a href="https://www.incibe.es/empresas/blog/ingenieria-social-tecnicas-utilizadas-los-ciberdelincuentes-y-protegerse"
+                                target="_blank" class="icon-link gap-1 icon-link-hover">
+                                Continua leyendo...
+                                <svg class="bi">
+                                    <use xlink:href="#chevron-right" />
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="col-auto d-none d-lg-block align-self-center pe-2">
+                            <img src="../static/imagenes/laptop.jpeg" alt="Descripción de la imagen" width="250"
+                                class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-5">
+                <div class="col-md-8">
+                    <h3 class="pb-4 mb-4 fst-italic border-bottom">
+                        Desde la Ciberseguridad
+                    </h3>
+
+                    <article class="blog-post rounded p-4 mb-4" style="background-color: #d6eaf8;">
+                        <h2 class="display-5 link-body-emphasis mb-1">Phishing a través de Correos Cebo</h2>
+                        <p class="blog-post-meta">Marzo 4, 2025 por Los <a href="#">Capitos</a></p>
+
+                        <p>Este artículo muestra algunos de los métodos más comunes utilizados en correos cebo
+                            para ataques de phishing. Exploraremos cómo los atacantes diseñan sus mensajes, qué
+                            elementos utilizan para engañar y cómo puedes protegerte.
+                        </p>
+                        <hr>
+
+                        <p>Los correos cebo pueden incluir contenido bien elaborado con imágenes, enlaces y textos
+                            persuasivos. A
+                            menudo imitan a empresas
+                            legítimas y solicitan que la víctima haga clic en un enlace malicioso o proporcione
+                            información
+                            confidencial.</h2>
+                        <p>🔍 ¡Mantente alerta y no caigas en la trampa del phishing!
+                        </p>
+                        <blockquote class="blockquote">
+                            <p>Ejemplo</p>
+                        </blockquote>
+                        <p>Este es un ejemplo de cómo los ciberdelincuentes estructuran sus mensajes para hacerlos más
+                            convincentes.
+                            Analizaremos cada uno de sus componentes y repetiremos ciertos patrones para que aprendas a
+                            identificarlos
+                            con facilidad.</p>
+                        <h3>Ejemplo de Listas en Correos de Phishing</h3>
+                        <p>Esta es una lista no ordenada de señales de alerta en correos electrónicos cebo:</p>
+                        <ul>
+                            <li>Remitente sospechoso con direcciones de correo poco confiables.</li>
+                            <li>Enlaces fraudulentos que parecen legítimos pero llevan a sitios maliciosos.</li>
+                            <li>Mensajes urgentes que intentan presionar al usuario para actuar rápidamente.</li>
+                        </ul>
+                        <p>Y esta es una lista ordenada de pasos para evitar caer en el phishing:</p>
+                        <ol>
+                            <li>Verifica la dirección del remitente antes de hacer clic en cualquier enlace.</li>
+                            <li>Pasa el cursor sobre los enlaces para comprobar si coinciden con el destino real.</li>
+                            <li>Busca errores ortográficos o gramaticales, ya que pueden ser una señal de phishing.</li>
+                        </ol>
+                        <p>Y esta es una lista de definiciones sobre phishing:</p>
+                        <dl>
+                            <dt>📧 Correo Cebo</dt>
+                            <dd>Un mensaje fraudulento diseñado para engañar y robar información personal.</dd>
+                            <dt>🔗 Enlace Malicioso</dt>
+                            <dd>Un vínculo disfrazado que redirige a una página falsa para robar credenciales.</dd>
+                            <dt>🎭 Suplantación de Identidad (Spoofing)</dt>
+                            <dd>Una técnica en la que los atacantes falsifican la identidad del remitente para parecer
+                                legítimos.</dd>
+                        </dl>
+
+                    </article>
+
+
+
+                    <nav class="blog-pagination col-md-10 d-flex justify-content-end" aria-label="Pagination">
+                        <a class="btn btn-outline-primary rounded-pill" href="#">Inicio</a>
+                    </nav>
+
+                </div>
+
+                <div class="col-md-4">
+                    <div class="position-sticky rounded " style="top: 1rem;">
+                        <div class="p-4 mb-3 rounded" style="background-color: #d6eaf8;">
+                            <h4 class="fst-italic">Acerca de</h4>
+                            <p class="mb-0">Este espacio está diseñado para educar a los usuarios sobre el phishing, con
+                                un enfoque
+                                especial en los correos electrónicos cebo.
+                                Aquí encontrarás información clave, ejemplos reales y consejos de seguridad para evitar
+                                caer en estafas
+                                digitales.</p>
+                        </div>
+
+                        <div>
+                            <h4 class="fst-italic">Publicaciones recientes</h4>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top"
+                                        href="https://consumidor.ftc.gov/articulos/como-reconocer-y-evitar-las-estafas-de-phishing#:~:text=Si%20recibe%20un%20email%20o,ser%20una%20estafa%20de%20phishing."
+                                        target="_blank">
+                                        <div class="col-auto d-none d-lg-block">
+                                            <img src="../static/imagenes/index01.jpg" alt="Descripción de la imagen"
+                                                width="200" height="262" class="img-fluid">
+                                        </div>
+                                        <div class="col-lg-8">
+                                            <h6 class="mb-0">Cómo reconocer un correo de phishing</h6>
+                                            <small class="text-body-secondary">15 de enero de 2024</small>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top"
+                                        href="https://www.deltaprotect.com/blog/senales-identificacion-correos-falsos"
+                                        target="_blank">
+                                        <div class="col-auto d-none d-lg-block">
+                                            <img src="../static/imagenes/correcto01.png" alt="Descripción de la imagen"
+                                                width="200" height="262" class="img-fluid">
+                                        </div>
+                                        <div class="col-lg-8">
+                                            <h6 class="mb-0">Señales de advertencia en correos electrónicos sospechosos
+                                            </h6>
+                                            <small class="text-body-secondary">14 de enero de 2024
+                                            </small>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top"
+                                        href="https://www.metacompliance.com/es/lp/ultimate-guide-phishing"
+                                        target="_blank">
+                                        <div class="col-auto d-none d-lg-block">
+                                            <img src="../static/imagenes/hacker.png" alt="Descripción de la imagen"
+                                                width="200" height="262" class="img-fluid">
+                                        </div>
+                                        <div class="col-lg-8">
+                                            <h6 class="mb-0">Guía completa sobre phishing: Todo lo que debes saber</h6>
+                                            <small class="text-body-secondary">13 de enero de 2024</small>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+
+
+                        <div class="p-4">
+                            <h4 class="fst-italic">En otra Parte</h4>
+                            <ol class="list-unstyled">
+                                <li><a href="https://github.com/topics/phishing" target="_blank">GitHub</a></li>
+                                <li><a href="https://help.x.com/es/safety-and-security/fake-x-emails"
+                                        target="_blank">Twitter</a></li>
+                                <li><a href="https://es-es.facebook.com/help/phishing/" target="_blank">Facebook</a>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+        </section>
+
+
+
+
     </div>
-
-
-
-    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
-
-  </section>
-
-
-
-
 </div>
